@@ -607,30 +607,37 @@
           </div>
         </div>
 
-        <form class="card contact-form reveal" id="contactForm" action="#" method="post" novalidate>
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
-          </div>
+        <form class="card contact-form reveal"
+      id="contactForm"
+      action="https://formspree.io/f/xeelolry"
+      method="POST">
 
-          <div class="form-row">
-            <label for="email">E-mail address</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
-          </div>
+  <!-- Optional: nicer email subject line -->
+  <input type="hidden" name="_subject" value="New ISRA website inquiry" />
 
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" placeholder="How can we help?" required></textarea>
-          </div>
+  <!-- Optional: simple spam honeypot (leave blank) -->
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
-          <button class="btn btn-primary" type="submit">
-            <i class="fa-solid fa-paper-plane"></i> Send message
-          </button>
+  <div class="form-row">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+  </div>
 
-          <p class="muted" style="margin-top:0.8rem; font-size:0.92rem;">
-            Note: This form is ready visually, but it won’t send emails until you connect it to a form service or backend.
-          </p>
-        </form>
+  <div class="form-row">
+    <label for="email">E-mail address</label>
+    <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+  </div>
+
+  <div class="form-row">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="6" placeholder="How can we help?" required></textarea>
+  </div>
+
+  <button class="btn btn-primary" type="submit">
+    <i class="fa-solid fa-paper-plane"></i> Send message
+  </button>
+</form>
+
       </div>
     </div>
   </section>
