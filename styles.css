@@ -1246,3 +1246,17 @@
       .values-kicker{ gap: 0; }
       .values-kicker i{ margin-right: .55rem; }
     }
+
+.form-status{
+  padding: .85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(78,205,196,.12);
+  color: rgba(255,255,255,.92);
+  font-weight: 600;
+}
+.form-status.error{
+  background: rgba(255,107,53,.12);
+  border-color: rgba(255,107,53,.35);
+}
+
