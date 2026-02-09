@@ -1091,18 +1091,6 @@
       border-color: rgba(255,61,127,0.55);
       box-shadow: 0 0 0 6px rgba(255,61,127,0.14);
     }
-.form-status{
-  padding: .85rem 1rem;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,.18);
-  background: rgba(78,205,196,.12);
-  color: rgba(255,255,255,.92);
-  font-weight: 600;
-}
-.form-status.error{
-  background: rgba(255,107,53,.12);
-  border-color: rgba(255,107,53,.35);
-}
 
     /* Footer */
     footer{
