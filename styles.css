@@ -1273,14 +1273,3 @@
   color: inherit;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-.pub-link:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.pub-link:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 3px;
-}
-
