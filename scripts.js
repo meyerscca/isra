@@ -80,9 +80,7 @@ window.addEventListener("DOMContentLoaded", function () {
           });
         }
       });
-
-      var yearEl = document.getElementById("year");
-      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    });
 
 window.addEventListener("load", function () {
       if (typeof Chart === "undefined") return;
