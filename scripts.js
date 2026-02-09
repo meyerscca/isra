@@ -80,6 +80,55 @@ window.addEventListener("DOMContentLoaded", function () {
           });
         }
       });
+
+      var yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+     var form = document.getElementById("contactForm");
+if (form) {
+  var statusEl = document.getElementById("formStatus");
+  var submitBtn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    function showStatus(msg, isError){
+      if (!statusEl) { alert(msg); return; }
+      statusEl.textContent = msg;
+      statusEl.style.display = "block";
+      statusEl.classList.toggle("error", !!isError);
+    }
+
+    var original = submitBtn ? submitBtn.innerHTML : "";
+    if (submitBtn){
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+    }
+
+    try {
+      var res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
+      });
+
+      if (res.ok) {
+        form.reset();
+        showStatus("Your message has been submitted.", false);
+      } else {
+        showStatus("Something went wrong. Please try again.", true);
+      }
+    } catch (err) {
+      showStatus("Network error. Please try again.", true);
+    } finally {
+      if (submitBtn){
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = original;
+      }
+    }
+  });
+}
+
     });
 
 window.addEventListener("load", function () {
